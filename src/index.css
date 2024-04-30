@@ -6,6 +6,8 @@
   --font-color-light: rgb(155, 155, 155);
   --background: rgb(255, 255, 255);
   --background--light: rgb(230, 230, 230);
+  --background-dark: rgb(50, 50, 50); /* New dark mode background color */
+  --font-color-dark: rgb(255, 255, 255); /* New dark mode font color */
 }
 
 * {
@@ -37,12 +39,7 @@ span[role="image"] {
   text-shadow: 0 0 0 black;
 }
 
-.App.dark {
-  --font-color: rgb(255, 255, 255);
-  --background: rgb(50, 50, 50);
-  --background--light: rgb(80, 80, 80);
-  transition: all 0.3s;
-}
+
 
 .App {
   margin: 2rem auto;
@@ -52,7 +49,14 @@ span[role="image"] {
   color: var(--font-color);
   box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
   border-radius: 10px;
+  transition: all 0.3s; /* Apply transition for smooth mode change */
 }
+
+.App.dark {
+  background: var(--background-dark);
+  color: var(--font-color-dark);
+}
+
 
 header {
   display: flex;
